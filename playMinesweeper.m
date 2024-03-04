@@ -61,6 +61,9 @@ while true
             case 1 %revealing a square
                 if isMineInSquare(solBoard,row,col)
                     %game over
+                    playerBoard = solBoard;
+                    playerBoard(row,col) = 13;
+                    displayBoard(playerBoard);
                     fprintf('***********************************\n  A mine has exploded! GAME OVER!\n***********************************\n')
                     break
 
