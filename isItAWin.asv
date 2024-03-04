@@ -16,9 +16,8 @@ function win = isItAWin(playerBoard, numMines)
 % RETURNS: win is a logical 1 if the game has been won
 %            otherwise false
 
-if (sum(sum(playerBoard(:,:)==11))+sum(sum(playerBoard(:,:)==12))) == numMines
-    win = true;
-else
-    win = false;
-end
+fprintf("%d",sum(sum(playerBoard(:,:)==11)))
+fprintf(" mines %d",sum(sum(playerBoard(:,:)==12)))
+win = false;
+
 end
